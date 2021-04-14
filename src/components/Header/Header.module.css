@@ -1,0 +1,53 @@
+.Logo{
+    display: flex;
+}
+.LogoText{
+    margin-top: 15px;
+    background:linear-gradient(to right, #00E966,#00B2FF);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+li{
+    list-style-type: none;
+    margin-top: 15px;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+.logoImg:hover{
+    text-decoration: none;
+}   
+.menu:hover{
+    color:black;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+}
+.sections{
+    display: flex;
+    justify-content: space-between;
+    width: 37%;
+}
+.regist{
+    display: flex;
+    justify-content: space-between;
+    width: 17%;
+}
+.btn{
+    background: white;
+    color:black;
+    height: 30px;
+    margin-top: 7%;
+    margin-left: 10px;
+    width: 70px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
