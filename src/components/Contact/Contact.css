@@ -1,0 +1,36 @@
+.blue_block{
+    width: 100%;
+    background: #00BEE8;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    justify-content: center;
+}
+.blue_block h2{
+    color:white;
+    margin: 0;
+}
+.contact_wrapper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+.contact_wrapper p{
+    font-size: 15px;
+    font-weight: 900;
+}
+.contact_text{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 500px;
+}
+.cos_set{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+}
+.cos_set img{
+    cursor: pointer;
+}

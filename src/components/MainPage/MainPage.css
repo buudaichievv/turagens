@@ -1,0 +1,37 @@
+.MainPage_input{
+    display: block;
+    width: 60%;
+    height: 50px;
+    margin: 2% 0%;
+    padding-left: 20px;
+}
+.MainPage{
+    margin-top: 5%;
+}
+.MainPage_btn{
+    width: 150px;
+    height: 50px;
+    color:white;
+    background: #00BEE8;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.MainPage_btn:hover{
+    color:#00BEE8;
+    background: white;
+    border: 1px solid #00BEE8;
+}
+.Alert{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    align-items: center;
+}
+.Alert_btn{
+    background: none;
+    color:black;
+    border: none;
+    font-size: 25px;
+}

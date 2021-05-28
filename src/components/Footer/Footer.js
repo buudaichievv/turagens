@@ -14,7 +14,6 @@ export default function Footer() {
                     <span>Комбинированные туры</span>
                     <span>Экскурсионный тур</span>
                     <span>Свадебный тур</span>
-                    <span>Все туры</span>
                 </div>
                 <div className='footer_info'>
                     <h5>Популярные страны</h5>

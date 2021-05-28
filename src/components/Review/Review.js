@@ -1,55 +1,38 @@
 
 import React from 'react';
-import MobileStepper from '@material-ui/core/MobileStepper';
-import Button from '@material-ui/core/Button';
-import slide1 from '../../img/slide1.jpg';
-import slide2 from '../../img/slide2.jpg';
-import slide3 from '../../img/slide3.jpg';
-const tutorialSteps = [
-  {
-    imgPath:{slide1}
-  },
-  {
-    imgPath:{slide2}
-  },
-  {
-    imgPath:{slide3}
+import { addPost } from '../../state';
+import './Review.css'
+export default function Review(props) {
+  let textPost = React.createRef()
+  const OnAddReview = () =>{
+    let text = textPost.current.value
+    addPost(text)
+    textPost.current.value = ""
   }
-];
-export default function Review() {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = tutorialSteps.length;
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
+let ReviewAdd = (props) =>{
+  return(
+    <div className="user">
+           <img src={props.user} alt="" className="user_img"/>
+          <p className="user_text">{props.comment}</p>
+    </div>
+  )
+}
   return (
     <div className='root'>
-      <img
-        className='img'
-        src={tutorialSteps[activeStep].imgPath}
-      />
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        variant="text"
-        activeStep={activeStep}
-        nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            Back
-          </Button>
-        }
-      />
+       <div className="yellow_block"><h2>ОТЗЫВЫ</h2></div>
+       <div className="container">
+       <div className="userWrapper">
+         {
+           props.post.map((el,index)=>{
+             return(
+                <ReviewAdd user = {el.img} comment = {el.comment}/>
+             )
+           })
+         }
+       </div>
+       <input type="text" className="root_input" placeholder="Добавить отзыв"  ref={textPost} />
+       <button className="root_btn" onClick = {OnAddReview}>добавить</button>
+    </div>
     </div>
   );
 }

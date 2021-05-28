@@ -19,12 +19,15 @@ a{
 .logoImg:hover{
     text-decoration: none;
 }   
+.menu{
+    color: #4f4f4f;
+}
 .menu:hover{
     color:black;
     border-bottom: 2px solid black;
     text-decoration: none;
+    font-weight: 700;
 }
-
 header{
     display: flex;
     justify-content: space-between;

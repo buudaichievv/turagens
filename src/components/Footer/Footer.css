@@ -1,8 +1,10 @@
 footer{
     width: auto;
     height: 460px;
-    background: #a6ebfa;
+    background:url(../../img/footer.png);
     margin-top: 100px;
+    background-position: center;
+    background-size: cover;
 }
 .footer_flex{
     display: flex;

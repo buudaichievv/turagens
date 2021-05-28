@@ -16,10 +16,6 @@ export default function Header() {
             <NavLink to='contact' className={h.menu}><li>Контакты</li></NavLink>
             <NavLink to='review' className={h.menu}><li>Отзывы</li></NavLink>
             </div>
-            <div className={h.regist}>
-            <NavLink to='regitration' className={h.menu}><li>Регистрация</li></NavLink>
-            <button className={h.btn}>Войти</button>
-            </div>
             </header>
         </div>
     )
