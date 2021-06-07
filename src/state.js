@@ -33,6 +33,7 @@ import flag12 from '../src/img/flag12.png'
 
 import ava from '../src/img/user.png'
 import { renderEntireTree } from './render'
+import Admin from './components/Admin/Admin'
 let store = {
         post:[
             {  
@@ -60,14 +61,14 @@ let store = {
                 img:ava
               },
               {  
-                comment:'номера шик',
+                comment:'номера шикарны',
                 img:ava
               }, {  
                 comment:'Хоршо отдохнул. Cпасибо вам',
                 img:ava
               }
             ],
-            newPostText:'',
+            // newPostText:'',
         sections:[
             {Text:'Горящие туры'},
             {Text:'Aквапарк'},
@@ -120,60 +121,78 @@ let store = {
             },
             {
               img:ctr2,
-              text:'турция',
+              text:'египет',
               flag:flag2
             },
             {
               img:ctr3,
-              text:'турция',
+              text:'тайланд',
               flag:flag3
             },
             {
               img:ctr4,
-              text:'турция',
+              text:'оаэ',
               flag:flag4
             },
             {
               img:ctr5,
-              text:'турция',
+              text:'грузия',
               flag:flag5
             },
             {
               img:ctr6,
-              text:'турция',
+              text:'китай',
               flag:flag6
             },
             {
               img:ctr7,
-              text:'турция',
+              text:'маврики',
               flag:flag7
             },
             {
               img:ctr8,
-              text:'турция',
+              text:'индия',
               flag:flag8
             },
             {
               img:ctr9,
-              text:'турция',
+              text:'чехия',
               flag:flag9
             },
             {
               img:ctr10,
-              text:'турция',
+              text:'въетнам',
               flag:flag10
             },
             {
               img:ctr11,
-              text:'турция',
+              text:'шри-ланка',
               flag:flag11
             },
             {
               img:ctr12,
-              text:'турция',
+              text:'малазия',
               flag:flag12
             },
-          ]
+          ],
+    adminInfo:[
+     
+
+    ]
+}
+export let addInfo =(name_,email_,number_,kol_,country_,id_)=>{
+  var newAdminInfo = {
+    name:name_,
+    email:number_,
+    number:kol_,
+    kol:country_,
+    country:email_,
+    id:id_
+};
+store.adminInfo.push(newAdminInfo)
+localStorage.setItem("value", JSON.stringify(store.adminInfo))
+let admin = localStorage.getItem("value")
+renderEntireTree(store)
 }
 export let addPost = (text)=>{
     let newPostReview = {

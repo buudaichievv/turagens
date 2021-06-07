@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 export let renderEntireTree = (store) =>{
 ReactDOM.render(
   <React.StrictMode>
-    <App card={store.card} sections={store.sections} country={store.country} post = {store.post}/>
+    <App card={store.card} sections={store.sections} country={store.country} post = {store.post} adminInfo={store.adminInfo}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

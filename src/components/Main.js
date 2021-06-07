@@ -7,18 +7,21 @@ import Review from './Review/Review'
 import Footer from './Footer/Footer'
 import Header from './Header/Header'
 import MainPage from './MainPage/MainPage'
+import Admin from './Admin/Admin'
 export default function Main(props) {
     return (
         <BrowserRouter>
         <Header/>
-        <Route exact path='/' render={()=><Order cards={props.card.cards} sections={props.sections}/>}/>
+            <Route exact path='/' render={()=><Order cards={props.card.cards} sections={props.sections}/>}/>
             <Route exact path='/logo' render={()=><Order cards={props.card.cards} sections={props.sections}/>}/>
             <Route exact path='/order' render={()=><MainPage/>}/>
             <Route exact path='/country' render={()=><Country country={props.country}/>}/>
             <Route exact path='/contact' render={()=><Contact/>}/>
             <Route exact path='/review' render={()=><Review post = {props.post}/>}/>
+            <Route exact path='/admin' render={()=><Admin adminInfo={props.adminInfo}/>}/>
         <Footer/>
         </BrowserRouter>
+        
     )
 }
 
